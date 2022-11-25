@@ -2,17 +2,14 @@
   padding: 20px;
   background-color: #a1b5cb;
 }
-
-.contendor{
+.contenedor{
   width: auto;
 }
-
 .parte1, .parte2{
   display: inline-block;
   text-align: justify;
 }
-
 .img-proyectos{
-  box-shadow: 10px 10px 5px #000;
+  box-shadow: 10px 10px 30px #000000;
   box-shadow: ejeX ejeY difumasion color;
 }
