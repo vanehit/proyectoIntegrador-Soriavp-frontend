@@ -9,7 +9,9 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 
-  URL ='https://backendvps.herokuapp.com/explab/';
+  expURL  ='https://backendvps.herokuapp.com/explab/';
+
+  URL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,18 +20,18 @@ export class SExperienciaService {
   }
 
   public detail(id: number): Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.URL + `detail/${id}`);
+    return this.httpClient.get<Experiencia>(this.URL  + `detail/${id}`);
   }
 
   public save(experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', experiencia);
+    return this.httpClient.post<any>(this.URL  + 'create', experiencia);
   }
 
   public update(id: number, experiencia: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, experiencia);
+    return this.httpClient.put<any>(this.URL  + `update/${id}`, experiencia);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.URL  + `delete/${id}`);
   }
 }
